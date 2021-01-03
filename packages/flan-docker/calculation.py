@@ -31,7 +31,7 @@ output_directory = "golem/resources"
 # first_year = "2012"
 # last_year = "2018"
 # count = "10"
-# origin_code = "NIC"
+# origin_code = "PAN"
 # code_type = "04D"
 # resource_directory = "datasets"
 # output_directory = "datasets"
@@ -194,7 +194,7 @@ for (index, row_values) in data_baci_results.iterrows():
     scatter = ax.scatter(x = x, y = y, c = color, s = scale, label = label)
 
 ax.grid(True)
-plt.title('World Trade Share Matrix - Golem Hackathon')
+plt.title('Growth-Share Matrix - Golem Hackathon')
 plt.xlabel('Growth in demand')
 plt.ylabel('Annual growth rate')
 plt.legend(bbox_to_anchor=(1,1), loc="upper left", title="Products")
