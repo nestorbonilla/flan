@@ -11,7 +11,7 @@ const { asyncWith, logUtils, range } = utils;
 const frames = range(0, 60, 10);
 const timeout = dayjs.duration({ minutes: 15 }).asMilliseconds();
 //vmHash = "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae"; // to replace for new golem vm hash
-vmHash = "e9afcdb56bb8d46a3a2dacc46dd504141b5440188f8f4c77c3b596c4"; // flan golem vm hash
+vmHash = "b2b0621ab4b4034e1c7658c4a323d88d79b3a37432f9ae51372794e1"; // flan golem vm hash
 
 router.post('/analyze', async (req, res, next) => {
 

@@ -25,7 +25,7 @@ origin_code = params["origin_code"]
 #code_type = "06D"
 code_type = params["code_type"]
 resource_directory = "golem/resources"
-output_directory = "golem/resources"
+output_directory = "golem/output"
 
 # GETTING PARAMETERS ~ DEVELOPMENT
 # first_year = "2012"

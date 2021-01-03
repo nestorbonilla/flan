@@ -24,7 +24,9 @@
       "build": "yarn workspace @flan/flan-app build --max-old-space-size=12288",      
       "start": "yarn workspace @flan/flan-app start",      
       "surge": "yarn workspace @flan/flan-app surge",      
-      "golem": "yarn workspace @flan/flan-api watch"
+      "golem": "yarn workspace @flan/flan-api watch",
+      "golem-local": "node ./packages/flan-api/local.js",
+      "golem-test": "node ./packages/flan-api/test.js"
     },
     "workspaces": {
       "packages": [

@@ -20,6 +20,10 @@ COPY datasets/BACI_04D_Y2018_V202001.csv golem/resources/BACI_04D_Y2018_V202001.
 COPY datasets/BACI_HS92_COUNTRY_CODE.csv golem/resources/BACI_HS92_COUNTRY_CODE.csv
 COPY datasets/BACI_HS4D_PRODUCT_CODE.csv golem/resources/BACI_HS4D_PRODUCT_CODE.csv
 COPY calculation.py golem/work/calculation.py
+COPY run-flan.sh golem/work/run-flan.sh
+
+#For test purposes
+COPY datasets/TEST_VALUES.csv golem/output/TEST_VALUES.csv
 
 # TO TRY DOCKER RUN IN LOCAL
 # COPY params.json golem/work/params.json
