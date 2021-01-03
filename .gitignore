@@ -17,6 +17,9 @@ build
 .DS_Store
 .env*
 
+# golem virtual machine
+/packages/flan-docker/*.gvmi
+
 # debug
 npm-debug.log*
 yarn-debug.log*

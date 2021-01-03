@@ -10,7 +10,8 @@ dayjs.extend(duration);
 const { asyncWith, logUtils, range } = utils;
 const frames = range(0, 60, 10);
 const timeout = dayjs.duration({ minutes: 15 }).asMilliseconds();
-vmHash = "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae"; // to replace for new golem vm hash
+//vmHash = "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae"; // to replace for new golem vm hash
+vmHash = "e9afcdb56bb8d46a3a2dacc46dd504141b5440188f8f4c77c3b596c4"; // flan golem vm hash
 
 router.post('/analyze', async (req, res, next) => {
 
@@ -18,16 +19,19 @@ router.post('/analyze', async (req, res, next) => {
 
     // 1. Receiving data
     console.log("data to analyze: ", req.body);
-    console.log("args: ", process.argv);
-    program
-      .storeOptionsAsProperties(true)
-      .passCommandToAction(true);
+    //console.log("args: ", process.argv);
+    //program
+    //  .storeOptionsAsProperties(true)
+    //  .passCommandToAction(true);
+    // program
+    //   .storeOptionsAsProperties(false)
+    //   .passCommandToAction(false);
     program
       .option('--subnet-tag <subnet>', 'set subnet name', 'community.3')
       .option('-d, --debug', 'output extra debugging');
     program.parse(process.argv);
     if (program.debug) {
-    utils.changeLogLevel("debug");
+      utils.changeLogLevel("debug");
     }
     console.log(`Using subnet: ${program.subnetTag}`);
 
@@ -41,11 +45,10 @@ router.post('/analyze', async (req, res, next) => {
 
       for await (let task of tasks) {
         ctx.send_json("golem/work/params.json", {
-          first_year: "2012",
-          last_year: "2018",
-          count: "10",
-          origin_code: "PAN",   // Panama
-          code_type: "04D",     // 4 digits code
+          first_year: req.body.startYear,
+          last_year: req.body.endYear,
+          count: req.body.count,
+          origin_code: req.body.origin
         });
         ctx.run("python3 golem/work/calculation.py");
         const output_file = `output_${task.toString()}.png`

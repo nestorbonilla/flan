@@ -7,7 +7,7 @@ import { Menu, Layout } from 'antd';
 import { HeaderComponent } from "./components";
 import HomeScreen from "./screens/HomeScreen";
 import ProfileDrawer from "./components/ProfileDrawer";
-import "../../../packages/react-app/src/i18n";
+import "../../../packages/flan-app/src/i18n";
 
 const { Footer } = Layout;
 

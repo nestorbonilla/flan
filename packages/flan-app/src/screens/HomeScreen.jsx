@@ -14,13 +14,14 @@ function HomeScreen() {
   const [form] = Form.useForm();
   const flanApiUrl = "http://localhost:5000";
 
-  const onFormAnalyze = () => {
+  const onFormAnalyze = (values) => {
     console.log("on form analyze...");
     
     var parameters = JSON.stringify({
-      startYear: 2012,
-      endYear: 2018,
-      country: 'pan'
+      startYear: values.start_year,
+      endYear: values.end_year,
+      count: "10",
+      origin: values.origin
     });
     // ANALYZE DATA
     analyzeData(parameters);
@@ -97,8 +98,8 @@ function HomeScreen() {
                         placeholder="Select the country"
                         allowClear
                       >
-                        <Option value="nic">Nicaragua</Option>
-                        <Option value="pan">Panama</Option>
+                        <Option value="NIC">Nicaragua</Option>
+                        <Option value="PAN">Panama</Option>
                       </Select>
                     </Form.Item>
                   </Col>
