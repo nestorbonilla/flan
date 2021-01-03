@@ -1,0 +1,64 @@
+{
+  "name": "@flan/flan-app",
+  "version": "0.0.1",
+  "homepage": ".",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@craco/craco": "^5.8.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.8",    
+    "antd": "^4.7.0",
+    "axios": "^0.20.0",    
+    "craco-less": "^1.17.0",
+    "dotenv": "^8.2.0",    
+    "i18next": "^19.8.4",
+    "i18next-xhr-backend": "^3.2.2",
+    "isomorphic-fetch": "^3.0.0",
+    "jwt-decode": "^3.1.2",
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-i18next": "^11.7.3",
+    "react-qr-reader": "^2.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^6.12.2",
+    "@types/react": "^16.9.19",
+    "chalk": "^4.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "surge": "^0.21.5"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "scripts": {
+    "build": "craco build",
+    "eject": "react-scripts eject",
+    "start": "craco start",
+    "test": "craco test",
+    "lint": "eslint --config ./.eslintrc.js --ignore-path ./.eslintignore ./src/**/*",
+    "surge": "surge ./build",
+    "ship": "yarn surge"
+  }
+}

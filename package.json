@@ -1,0 +1,35 @@
+{
+    "name": "@flan/monorepo",
+    "description": "Disaggregated data on bilateral trade flows analysis using Golem.",
+    "version": "0.0.1",
+    "keywords": [
+      "golem",
+      "flow",
+      "analysis"
+    ],
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/nestorbonilla/flan"
+    },
+    "author": {
+        "name" : "Nestor Bonilla"
+    },
+    "license": "LGPL-3.0",
+    "private": true,
+    "scripts": {
+      "react-app:build": "yarn workspace @flan/flan-app build --max-old-space-size=12288",
+      "react-app:eject": "yarn workspace @flan/flan-app eject",
+      "react-app:start": "yarn workspace @flan/flan-app start",
+      "react-app:test": "yarn workspace @flan/flan-app test",
+      "build": "yarn workspace @flan/flan-app build --max-old-space-size=12288",      
+      "start": "yarn workspace @flan/flan-app start",      
+      "surge": "yarn workspace @flan/flan-app surge",      
+      "golem": "yarn workspace @flan/flan-api watch"
+    },
+    "workspaces": {
+      "packages": [
+        "packages/*"
+      ]
+    }
+  }
+  
