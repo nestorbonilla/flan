@@ -4,12 +4,10 @@
 
 ## Abstract
 
-When entrepreneurs want to enter a sector with a new initiative, they usually make research focused on its location and their subjectivity on the experience of the people and organization that interact with them at some level. This tends to give entrepreneurs an extremely biased perception of what is a good product or service to offer to the public, one that could be scalable and is being demanded at a regional and/or global level.
-
-The datasets of global trade import and exports are heavy and require considerable calculations, but with Golem’s decentralized computational power that's not a barrier. The aim of Flan is that with a set of minimal inputs from users (such as country to analyze, from which year, and until what year), a series of advice in form of image statistics could be provided on what are the products or services that are being more demanded, at a local, regional and global level.
+What if with just a minimal set of parameters from entrepreneurs we could provide a customized analysis of millions of worldwide trade value records giving them a bold guideline about what sectors they would need to take more attention? With Golem’s global decentralized super computer that anyone can access this is possible as simple, as a piece of **FLAN**.
 
 ## Resources
 
-* [Video](https://youtu.be/)
-* [Slides](https://youtu.be/)
-* [Gitbook](https://nestorbonilla.gitbook.io/flan/)
+* [Demo](https://youtu.be/)
+* [Pitch](https://docs.google.com/presentation/d/1mT-n693-2e-3TE2LbYTEXC0Cim9zvjx49sr_CWmg9gk)
+* [Manual](https://nestorbonilla.gitbook.io/flan/)
