@@ -201,9 +201,11 @@ chartBox = ax.get_position()
 ax.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.6, chartBox.height])
 plt.axvline(0, c=(.5, .5, .5), ls="--")
 plt.axhline(0, c=(.5, .5, .5), ls="--")
+plt.savefig("baci_plot.png")
 
 # Saving result
 print("5. Showing results...")
 plt.show()
+
 
 print("6. Done...")
