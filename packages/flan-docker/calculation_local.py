@@ -11,12 +11,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # GENERAL VARIABLES
-resource_directory = "/golem/resources"
-working_directory = "/golem/work"
-output_directory = "/golem/output"
+resource_directory = "datasets/"
 
 # GETTING PARAMETERS FROM FILE
-file_params_name = f"${working_directory}/params.json"
+file_params_name = "params.json"
 file_params = open (file_params_name, "r")
 params = json.loads(file_params.read())
 
@@ -205,8 +203,7 @@ plt.axvline(0, c=(.5, .5, .5), ls="--")
 plt.axhline(0, c=(.5, .5, .5), ls="--")
 
 # Saving result
-print("5. Saving results...")
-data_baci_results.to_csv(f"{output_directory}/baci_result.csv")
-plt.savefig(f"{output_directory}/baci_plot.png")
+print("5. Showing results...")
+plt.show()
 
 print("6. Done...")

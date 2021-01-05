@@ -21,14 +21,15 @@ function HomeScreen() {
       startYear: values.start_year,
       endYear: values.end_year,
       count: "10",
-      origin: values.origin
+      origin: values.origin,
+      type: "04D"
     });
     // ANALYZE DATA
     analyzeData(parameters);
   }
 
   const analyzeData = async (parameters) => {
-    console.log("Sending request...");
+    console.log("1. Sending request from react app...");
     const response = await fetch(`${flanApiUrl}/golem/analyze`, {
       method: 'POST',
       headers: {

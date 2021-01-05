@@ -8,6 +8,8 @@ When entrepreneurs want to enter a sector with a new initiative, they usually ma
 
 The datasets of global trade import and exports are heavy and require considerable calculations, but with Golem’s decentralized computational power that's not a barrier. The aim of Flan is that with a set of minimal inputs from users (such as country to analyze, from which year, and until what year), a series of advice in form of image statistics could be provided on what are the products or services that are being more demanded, at a local, regional and global level.
 
-## Videos
+## Resources
 
-* [Demo](https://youtu.be/)
+* [Video](https://youtu.be/)
+* [Slides](https://youtu.be/)
+* [Gitbook](https://nestorbonilla.gitbook.io/flan/)

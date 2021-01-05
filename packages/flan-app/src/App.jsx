@@ -6,7 +6,6 @@ import { Menu, Layout } from 'antd';
 
 import { HeaderComponent } from "./components";
 import HomeScreen from "./screens/HomeScreen";
-import ProfileDrawer from "./components/ProfileDrawer";
 import "../../../packages/flan-app/src/i18n";
 
 const { Footer } = Layout;
@@ -14,8 +13,6 @@ const { Footer } = Layout;
 const DEBUG = false
 
 function App(props) {
-
-  const [showProfileDrawer, setShowProfileDrawer] = useState(false);
 
   const [route, setRoute] = useState();
   useEffect(() => {
@@ -27,12 +24,7 @@ function App(props) {
       <Fragment>
         <BrowserRouter>
           <Layout style={{ minHeight: '100vh' }}>
-            <HeaderComponent handleProfileDrawer={() => setShowProfileDrawer(true)} />     
-            <ProfileDrawer
-              data-testid='profile-drawer'
-              show={showProfileDrawer}
-              handleOnClose={() => setShowProfileDrawer(false)}              
-            />
+            <HeaderComponent />                 
             <Switch>
               <Route exact path='/' render={() => <HomeScreen />}/>
               

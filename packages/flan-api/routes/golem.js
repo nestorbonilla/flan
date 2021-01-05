@@ -10,22 +10,16 @@ dayjs.extend(duration);
 const { asyncWith, logUtils, range } = utils;
 const frames = range(0, 60, 10);
 const timeout = dayjs.duration({ minutes: 15 }).asMilliseconds();
-//vmHash = "9a3b5d67b0b27746283cb5f287c13eab1beaa12d92a9f536b747c7ae"; // to replace for new golem vm hash
-vmHash = "64f3f05321861c9001f3a6adfa38832401c77c9e17b6353bac58b8b2"; // flan golem vm hash
+vmHash = "d7153e3513be16835fb26ef8d230fce3bf0f33cc826e2e3480fc3cc5"; // flan golem vm hash
 
 router.post('/analyze', async (req, res, next) => {
 
   try {
-
-    // 1. Receiving data
-    console.log("data to analyze: ", req.body);
-    //console.log("args: ", process.argv);
-    //program
-    //  .storeOptionsAsProperties(true)
-    //  .passCommandToAction(true);
-    // program
-    //   .storeOptionsAsProperties(false)
-    //   .passCommandToAction(false);
+    console.log("2. Receiving request in api...");
+    console.log("3. Params to analyze: ", req.body);
+    program
+     .storeOptionsAsProperties(true)
+     .passCommandToAction(true);
     program
       .option('--subnet-tag <subnet>', 'set subnet name', 'community.3')
       .option('-d, --debug', 'output extra debugging');
@@ -44,17 +38,18 @@ router.post('/analyze', async (req, res, next) => {
     async function* worker(ctx, tasks) {
 
       for await (let task of tasks) {
-        ctx.send_json("golem/work/params.json", {
+        ctx.send_json("/golem/work/params.json", {
           first_year: req.body.startYear,
           last_year: req.body.endYear,
           count: req.body.count,
-          origin_code: req.body.origin
+          origin_code: req.body.origin,
+          type_code: req.body.type
         });
-        ctx.run("python3 golem/work/calculation.py");
-        const output_file = `output_${task.toString()}.png`
+        ctx.run("/golem/work/run_flan.sh");
+        const output_file = "baci_plot.png";
         ctx.download_file(
-          "golem/output/baci_plot.png",
-          path.join(__dirname, `../output_${task}.png`)
+          `/golem/output/${output_file}`,
+          path.join(__dirname, `./${output_file}`)
         );
         yield ctx.commit();
         // TODO: Check
@@ -63,7 +58,7 @@ router.post('/analyze', async (req, res, next) => {
         task.accept_task(output_file);
       }
   
-      ctx.log("no more frames to render");
+      ctx.log("no more images to download");
       return;
     }
 

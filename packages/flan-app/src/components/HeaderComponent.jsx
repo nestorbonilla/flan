@@ -6,10 +6,7 @@ import { ReactComponent as Logo } from '../assets/vectors/golem_icon.svg'
 
 const { Header } = Layout;
 
-function HeaderComponent({
-  role,
-  handleProfileDrawer
-}) {
+function HeaderComponent() {
 
   return (
     <Header className='header'>
@@ -22,12 +19,6 @@ function HeaderComponent({
         </Menu.Item>
         <Menu.Item key="2">
           <NavLink className='nav-link' to='/about'>About</NavLink>
-        </Menu.Item>
-        <Menu.Item key="5" style={{float: 'right'}}>
-          <NavLink
-            className='nav-link'
-            to='/'
-            onClick={handleProfileDrawer}>Profile</NavLink>
         </Menu.Item>
       </Menu>
     </Header>
