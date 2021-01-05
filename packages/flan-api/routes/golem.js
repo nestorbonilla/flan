@@ -10,7 +10,7 @@ dayjs.extend(duration);
 const { asyncWith, logUtils, range } = utils;
 const frames = range(0, 60, 10);
 const timeout = dayjs.duration({ minutes: 15 }).asMilliseconds();
-vmHash = "d7153e3513be16835fb26ef8d230fce3bf0f33cc826e2e3480fc3cc5"; // flan golem vm hash
+vmHash = "b44ef57a54eee143a9f6ab2e6825a49a08379e7e228b4b62edf640cc"; // flan golem vm hash
 
 router.post('/analyze', async (req, res, next) => {
 

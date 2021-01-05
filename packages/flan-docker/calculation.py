@@ -16,7 +16,7 @@ working_directory = "/golem/work"
 output_directory = "/golem/output"
 
 # GETTING PARAMETERS FROM FILE
-file_params_name = f"${working_directory}/params.json"
+file_params_name = "params.json"
 file_params = open (file_params_name, "r")
 params = json.loads(file_params.read())
 
