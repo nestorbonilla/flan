@@ -9,6 +9,6 @@ What if with just a minimal set of parameters from entrepreneurs we could provid
 
 ## Resources
 
-* [Demo](https://youtu.be/)
+* [Demo](https://youtu.be/532UsKSXpYc)
 * [Pitch](https://docs.google.com/presentation/d/1mT-n693-2e-3TE2LbYTEXC0Cim9zvjx49sr_CWmg9gk)
 * [Manual](https://nestorbonilla.gitbook.io/flan/)
